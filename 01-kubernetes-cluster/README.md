@@ -12,7 +12,7 @@ You can create a Schematics workspace as described in the [00-resource-group](..
 
 In step 4:
   - Select the `01-kubernetes-cluster` folder from the repository.
-  - name: `kubernetes-cluster-workspace` (or any name you prefer
+  - name: `kubernetes-cluster-workspace` (or any name you prefer)
   - Description: `Workspace to create an IBM Cloud Kubernetes Cluster` (optional)
 
 In step 6, set the following variables:

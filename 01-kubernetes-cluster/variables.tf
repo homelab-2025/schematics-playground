@@ -4,15 +4,15 @@ variable "region" {}
 
 # Variables for Resource Group
 variable "resource_group_name" {
-  default = "terraform-rg"
+  default = "tf-rg-k8s"
 }
 
 variable "vpc_name" {
-  default = "terraform-vpc"
+  default = "tf-vpc"
 }
 
 variable "subnet_name" {
-  default = "terraform-subnet"
+  default = "tf-subnet"
 }
 
 variable "subnet_azs" {
@@ -20,7 +20,7 @@ variable "subnet_azs" {
 }
 
 variable "k8s_cluster_name" {
-  default = "terraform-k8s-cluster"
+  default = "tf-k8s-cluster"
 }
 
 variable "k8s_version" {
