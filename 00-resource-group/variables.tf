@@ -5,4 +5,5 @@ variable "region" {}
 # Variables for Resource Group
 variable "resource_group_name" {
   default = "terraform-rg"
+  type = string
 }
