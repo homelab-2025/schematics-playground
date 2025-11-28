@@ -1,4 +1,4 @@
-# Resource Group
+# Resource Group on IBM Cloud
 
 This directory contains the Terraform configuration files for creating an IBM Cloud Resource Group.
 
