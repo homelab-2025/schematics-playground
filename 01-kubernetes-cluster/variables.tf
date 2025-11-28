@@ -40,7 +40,7 @@ variable "k8s_version" {
 }
 
 variable "k8s_cluster_flavor" {
-  default = "bx2.2x8" # minimum flavor for k8s cluster
+  default = "bx2.2x8" # minimum flavor is bx2.2x8 for k8s cluster
   type    = string
 }
 
