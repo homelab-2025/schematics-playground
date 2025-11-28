@@ -7,7 +7,7 @@ output "vpc_id" {
 }
 
 output "subnet_id" {
-  value = ibm_is_subnet.subnet.id  
+  value = ibm_is_subnet.subnet.id
 }
 
 output "k8s_cluster_id" {

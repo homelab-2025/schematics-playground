@@ -18,7 +18,7 @@ resource "ibm_is_subnet" "subnet" {
 resource "ibm_container_vpc_cluster" "k8s_cluster" {
   name              = var.k8s_cluster_name
   vpc_id            = ibm_is_vpc.vpc.id
-  kube_version     =  var.k8s_version
+  kube_version      = var.k8s_version
   flavor            = var.k8s_cluster_flavor
   worker_count      = var.k8s_worker_count
   resource_group_id = ibm_resource_group.resource_group.id
