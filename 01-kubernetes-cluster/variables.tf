@@ -9,12 +9,12 @@ variable "resource_group_name" {
 }
 
 variable "vpc_name" {
-  default = "tf-vpc"
+  default = "tf-vpc-k8s"
   type    = string
 }
 
 variable "subnet_name" {
-  default = "tf-subnet"
+  default = "tf-subnet-k8s"
   type    = string
 }
 
@@ -30,7 +30,7 @@ variable "subnet_total_ips" {
 }
 
 variable "k8s_cluster_name" {
-  default = "tf-k8s-cluster"
+  default = "tf-cluster-k8s"
   type    = string
 }
 
