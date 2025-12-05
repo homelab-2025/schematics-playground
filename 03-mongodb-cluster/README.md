@@ -24,7 +24,6 @@ terraform init
 ```
 
 3. Create a `terraform.tfvars` from `terraform.tfvars.example`
-```
 
 4. Plan the Terraform deployment:
 
