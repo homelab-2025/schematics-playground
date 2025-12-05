@@ -18,11 +18,11 @@ In step 4:
 In step 6, set the following variables:
   - `ibmcloud_api_key`: Your IBM Cloud API key
   - `region`: Your preferred IBM Cloud region (e.g., `eu-de`)
-  - `resource_group_name`: Name of the existing resource group where you want to deploy the cluster (e.g., `my-resource-group`)
-  - `subnet_azs`: Availability zone for the subnet (e.g., `eu-de-1`)
+  - `name`: Name of the OpenShift cluster (e.g., `OpenShift`)
+  - `number_of_zones`: Number of availability zone to create (1-3)
   - `openshift_cluster_version`: OpenShift version to deploy (e.g., `4.19.17_openshift`)
   - `openshift_cluster_flavor`: Flavor for the worker nodes (e.g., `bx2.4x16`)
-  - `openshift_worker_count`: Number of worker nodes (e.g., `2`)
+  - `openshift_worker_count_per_zone`: Number of worker nodes per availability zone (e.g., `2`)
 
 Then proceed with planning and applying the workspace as described in the previous section.
 
@@ -50,11 +50,11 @@ terraform init
 ```bash
 ibmcloud_api_key = "YOUR_IBM_CLOUD_API_KEY"
 region = "YOUR_PREFERRED_REGION"
-resource_group_name = "YOUR_DESIRED_RESOURCE_GROUP_NAME"
-subnet_azs = "YOUR_DESIRED_AVAILABILITY_ZONE"
-openshift_cluster_version = "DESIRED_OPENSHIFT_VERSION"
-openshift_cluster_flavor = "DESIRED_WORKER_NODE_FLAVOR"
-openshift_worker_count = NUMBER_OF_WORKER_NODES
+name = "YOUR_OPENSHIFT_CLUSTER_NAME"
+number_of_zones = 1 # Adjust as needed between 1-3
+openshift_cluster_version = "4.19.17_openshift" # Adjust as needed
+openshift_cluster_flavor = "bx2.4x16" # Adjust as needed
+openshift_worker_count_per_zone = 2 # Adjust as needed
 ```
 
 4. Plan the Terraform deployment:

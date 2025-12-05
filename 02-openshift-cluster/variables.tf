@@ -2,29 +2,18 @@
 variable "ibmcloud_api_key" {}
 variable "region" {}
 
+
 # Variables for Resource Group
-variable "resource_group_name" {
-  default = "tf-rg-oc"
+variable "name" {
+  description = "Base name for all resources"
+  default = "openshift-cluster"
   type    = string
 }
 
-variable "vpc_name" {
-  default = "tf-vpc-oc"
-  type    = string
-}
-
-variable "public_gateway_name" {
-  default = "tf-pgw-oc"
-  type    = string
-}
-variable "subnet_name" {
-  default = "tf-subnet-oc"
-  type    = string
-}
-
-variable "subnet_azs" {
-  default = "eu-de-1"
-  type    = string
+variable "number_of_zones" {
+  description = "Number of availability zones to use"
+  default     = 2
+  type        = number
 }
 
 variable "subnet_total_ips" {
@@ -33,34 +22,32 @@ variable "subnet_total_ips" {
   type        = number
 }
 
-variable "cos_name" {
-  default = "tf-cos-oc"
-}
-
 variable "cos_plan" {
-  default = "standard"  
+  description = "Plan for Cloud Object Storage instance"
+  default = "standard"
+  type    = string  
 }
 
 variable "cos_location" {
+  description = "Location for Cloud Object Storage instance"
   default = "global"
-}
-
-variable "openshift_cluster_name" {
-  default = "tf-cluster-oc"
   type    = string
 }
 
 variable "openshift_cluster_version" {
+  description = "OpenShift version for OpenShift cluster"
   default = "4.19.17_openshift"
   type    = string
 }
 
 variable "openshift_cluster_flavor" {
-  default = "bx2.4x16" # minimum flavor is bx2.4x16 for OpenShift cluster
+  description = "Flavor for OpenShift cluster worker nodes. The minimum flavor is bx2.4x16."
+  default = "bx2.4x16"
   type    = string
 }
 
-variable "openshift_worker_count" {
-  default = 2 # minimum 2 worker node
+variable "openshift_worker_count_per_zone" {
+  description = "Number of worker nodes per availability zone. It will be multiplied by number_of_zones variable. Note that minimum total worker nodes is 2."
+  default = 2
   type    = number
 }
